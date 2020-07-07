@@ -14,9 +14,9 @@ How to crawl
 
 Set input:
  
-start url = https://www.wikipedia.org/
-max link depth = 2
-max page count = 3
+start url = https://www.wikipedia.org/;
+max link depth = 2;
+max page count = 3;
 input keywords = Tesla, Musk, Gigafactory, Elon Mask
 
 Run application or jar file.
@@ -24,16 +24,18 @@ Run application or jar file.
 Output:
 
 https://www.wikipedia.org/page1.html 8 4 5 0 17
+
 https://www.wikipedia.org/page2.html 11 5 9 0 25
+
 https://www.wikipedia.org/page3.html 1 4 3 0 8
 
 where:
 
-https://www.wikipedia.org/page2.html - start url
-	Tesla - 11 hits
-	Musk - 5 hits
-	Gigafactory - 9 hits
-	Elon Mask - 0 hits
+https://www.wikipedia.org/page2.html - start url;
+	Tesla - 11 hits;
+	Musk - 5 hits;
+	Gigafactory - 9 hits;
+	Elon Mask - 0 hits;
 	total inclusions - 25 hits
 
 Requirements:
