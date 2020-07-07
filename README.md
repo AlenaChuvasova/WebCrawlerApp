@@ -41,9 +41,12 @@ https://www.wikipedia.org/page2.html - start url;
 Requirements:
 
 Maven 3.6.0
+
 JDK 11.0.1
 
 For program execution:
 cd to project root folder in command line
+
 mvn compile
+
 mvn exec:java -Dexec.mainClass=test.chuvasova.webcrawler.CrawlerApp
