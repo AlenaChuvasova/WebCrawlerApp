@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.chuvasova.webcrawler.ui.UiController">
+   <children>
+      <AnchorPane fx:id="maxCount" layoutY="-6.0" prefHeight="412.0" prefWidth="600.0">
+         <children>
+            <TextField fx:id="wordSecond" layoutX="152.0" layoutY="83.0" prefHeight="31.0" prefWidth="140.0" />
+            <TextField fx:id="wordFirst" layoutX="3.0" layoutY="83.0" prefHeight="31.0" prefWidth="140.0" />
+            <TextField fx:id="wordThird" layoutX="302.0" layoutY="83.0" prefHeight="31.0" prefWidth="140.0" />
+            <TextField fx:id="wordFourth" layoutX="453.0" layoutY="83.0" prefHeight="31.0" prefWidth="140.0" />
+            <TextField fx:id="url" layoutX="3.0" layoutY="160.0" prefHeight="31.0" prefWidth="594.0" />
+            <Button fx:id="search" layoutX="106.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickSearch" text="SEARCH" />
+            <Label layoutX="229.0" layoutY="14.0" prefHeight="27.0" prefWidth="146.0" text="Web Crawler">
+               <font>
+                  <Font name="Arial" size="22.0" />
+               </font></Label>
+            <Label layoutX="3.0" layoutY="53.0" prefHeight="21.0" prefWidth="288.0" text="Please, enter your search words:">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Label>
+            <Label layoutX="3.0" layoutY="129.0" prefHeight="21.0" prefWidth="294.0" text="Please, enter a search page URL:">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font></Label>
+            <TextField fx:id="maxDepth" layoutX="3.0" layoutY="238.0" prefHeight="31.0" prefWidth="75.0" />
+            <TextField fx:id="maxCountPage" layoutX="223.0" layoutY="238.0" prefHeight="31.0" prefWidth="75.0" />
+            <Label layoutX="3.0" layoutY="207.0" text="Set max depth">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Label>
+            <Label layoutX="223.0" layoutY="207.0" text="Set max page to search">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
