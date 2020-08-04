@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import test.chuvasova.webcrawler.crawler.Crawler;
@@ -83,10 +84,12 @@ public class UiController {
         topTenPages = crawledPages.stream().limit(10).collect(Collectors.toList());
         CrawledPagesExporter.exportCrawledToCSV(topTenPages, "D:\\csv\\top10.csv", inputKeywords);
         Parent root = FXMLLoader.load(getClass().getResource("/output.fxml"));
+        Scene scene = new Scene(root, 405, 526);
+        scene.getStylesheets().add("/style.css");
         Stage secondStage = new Stage();
-        secondStage.setScene(new Scene(root, 405, 526));
+        secondStage.setScene(scene);
         secondStage.initModality(Modality.WINDOW_MODAL);
-        secondStage.initOwner(((Node)event.getSource()).getScene().getWindow());
+        secondStage.initOwner(((Node) event.getSource()).getScene().getWindow());
         secondStage.show();
     }
 

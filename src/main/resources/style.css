@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Regular.ttf');
+}
+
+* {
+    -fx-font-family: "Ubuntu";
+}
+
+#crawler {
+    -fx-background-color: #2f353d;
+    -fx-text-fill: #e8e8e8;
+}
+
+#output {
+    -fx-background-color: #2f353d;
+    -fx-text-fill: #e8e8e8;
+}
+
+.button {
+    -fx-font-family: 'Ubuntu', sans-serif;
+    -fx-background-color: linear-gradient(to bottom right, rgb(250, 166, 82), rgb(250, 165, 80), rgb(249, 163, 79), rgb(249, 162, 77), rgb(248, 161, 75), rgb(248, 159, 73), rgb(247, 158, 72), rgb(247, 156, 70), rgb(246, 155, 68), rgb(246, 154, 66), rgb(245, 152, 65), rgb(245, 151, 63));
+    -fx-text-fill: #e8e8e8;
+    -fx-background-radius: 20;
+}
+
+.label {
+    -fx-font-family: 'Ubuntu', sans-serif;
+    -fx-text-fill: #e8e8e8;
+}
+
+.text-field {
+    -fx-border-color: #f94919;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.text-area {
+    -fx-background-color: #7E7D8D;
+    -fx-background-radius: 5;
+    -fx-border-color: #f94919;
+    -fx-border-radius: 5;
+}

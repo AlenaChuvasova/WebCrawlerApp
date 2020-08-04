@@ -14,7 +14,7 @@ import static test.chuvasova.webcrawler.ui.UiController.topTenPages;
 public class OutputController {
 
     @FXML
-    private TextArea console;
+    private TextArea area;
     @FXML
     private Button close;
     @FXML
@@ -34,6 +34,6 @@ public class OutputController {
 
     @FXML
     void initialize() {
-        ps = new PrintStream(new Console(console));
+        ps = new PrintStream(new Console(area));
     }
 }
