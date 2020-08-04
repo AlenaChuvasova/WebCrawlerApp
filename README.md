@@ -2,22 +2,11 @@
 
 Java web crawler 
 
-Simple java Web crawler to crawl web pages on predefined url and collect statistics (inclusions certain word(s) on pages) 
-Basically you can set word(s) for searching, max depth (allows you to only crawls pages reached within the number of clicks from the starting page) and max pages for counting.
-
-Crawl start searching from start url, defining the depth of the crawl and number of pages to crawl and collect data.
-
+Simple java Web crawler to crawl web pages based on the entered data and collect statistics (inclusions certain word(s) on pages) 
+GUI allows you to set word(s) for searching, searching page url, max depth (allows you to only crawls pages reached within the number of clicks from the starting page) and max pages for counting.
+By clicking SUBMIT you start searching process, on appearing window click GET RESULT - you will see top ten pages with max amount of searching words inclusions.
 Outputs data to a csv file.
 Outputs the top ten pages sorted by total inclusions to a separate csv file. 
-
-How to crawl
-
-Set input:
- 
-start url = https://www.wikipedia.org/;
-max link depth = 2;
-max page count = 3;
-input keywords = Tesla, Musk, Gigafactory, Elon Mask
 
 Run application or jar file.
 
@@ -32,10 +21,10 @@ https://www.wikipedia.org/page3.html 1 4 3 0 8
 where:
 
 https://www.wikipedia.org/page2.html - start url;
-	Tesla - 11 hits;
-	Musk - 5 hits;
-	Gigafactory - 9 hits;
-	Elon Mask - 0 hits;
+	word1 - 11 hits;
+	word2 - 5 hits;
+	word3 - 9 hits;
+	word4 - 0 hits;
 	total inclusions - 25 hits
 
 Requirements:
@@ -43,6 +32,8 @@ Requirements:
 Maven 3.6.0
 
 JDK 11.0.1
+
+JavaFX 11.0.2
 
 For program execution:
 cd to project root folder in command line
