@@ -2,8 +2,14 @@ package test.chuvasova.webcrawler.ui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import test.chuvasova.webcrawler.crawler.Crawler;
 import test.chuvasova.webcrawler.domain.CrawledPage;
 import test.chuvasova.webcrawler.export.csv.CrawledPagesExporter;
@@ -33,8 +39,11 @@ public class UiController {
     @FXML
     private TextField maxCountPage;
 
+    static List<CrawledPage> topTenPages;
+    private List<String> inputWords = new ArrayList<>();
+    static List<String> inputKeywords;
+
     public List<String> inputData() {
-        List<String> inputWords = new ArrayList<>();
         String w1 = wordFirst.getText();
         String w2 = wordSecond.getText();
         String w3 = wordThird.getText();
@@ -62,7 +71,7 @@ public class UiController {
     }
 
     public void onClickSearch(ActionEvent event) throws Exception {
-        List<String> inputKeywords = inputData();
+        inputKeywords = inputData();
         Integer maxLinkDepth = setDepth();
         Integer maxPageCount = setPageCount();
         String startUrl = getUrl();
@@ -71,9 +80,14 @@ public class UiController {
         CrawledPagesExporter.exportCrawledToCSV(crawledPages, "D:\\csv\\fullData.csv", inputKeywords);
         Collections.sort(crawledPages, new CrawledPageComparator());
         Collections.reverse(crawledPages);
-        List<CrawledPage> topTenPages = crawledPages.stream().limit(10).collect(Collectors.toList());
+        topTenPages = crawledPages.stream().limit(10).collect(Collectors.toList());
         CrawledPagesExporter.exportCrawledToCSV(topTenPages, "D:\\csv\\top10.csv", inputKeywords);
-        topTenPages.stream().forEach(t -> System.out.println(t.toCSVString(inputKeywords)));
+        Parent root = FXMLLoader.load(getClass().getResource("/output.fxml"));
+        Stage secondStage = new Stage();
+        secondStage.setScene(new Scene(root, 405, 526));
+        secondStage.initModality(Modality.WINDOW_MODAL);
+        secondStage.initOwner(((Node)event.getSource()).getScene().getWindow());
+        secondStage.show();
     }
 
     @FXML

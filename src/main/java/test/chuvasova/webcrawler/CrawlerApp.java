@@ -19,7 +19,7 @@ public class CrawlerApp extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("/crawler.fxml"));
         primaryStage.setTitle("Web Crawler");
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 405, 526));
         primaryStage.show();
     }
 
